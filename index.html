@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="board">
+        <div class="column">
+            <div class="card">
+                HTML
+            </div>
+            <div class="card">
+                CSS
+            </div>
+            <div class="card">
+                JAVASCRIPT
+            </div>
+        </div>  
+        <div class="column">
+            <div class="card">
+                PHP
+            </div>
+            <div class="card">
+                MYSQL
+            </div>
+            <div class="card">
+                LARAVEL
+            </div>
+        </div>  
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+
+    <script>
+        function setupDragAndDrop(){
+            let columns = document.querySelectorAll('.column');
+            
+            for(let i = 0; i < columns.length; i++){
+                new Sortable(columns[i], {
+                    group: 'shared',
+                    animation: 150,
+                    ghostClass: 'ghost'
+                })
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', function(){
+            setupDragAndDrop()
+        })
+    </script>
+</body>
+</html>

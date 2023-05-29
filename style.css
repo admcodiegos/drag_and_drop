@@ -1,0 +1,44 @@
+body{
+    background-color: #272727;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    display: flex;
+    width: 90%;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+    background-color: #f2f2f218;
+    border-radius: 5px;
+    min-width: 250px;
+    box-shadow: 0 0 10px #00000076;
+    box-sizing: border-box;
+    padding: 3%;
+}
+
+.card {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #03fa6ead;
+    color: #272727;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #cccccc21;
+    box-shadow: 0 0 10px #00000076;
+    transition: background-color 0.3s;
+    user-select: none;
+}
+
+.card:hover {
+    background-color: #03FA6E;
+    border: 1px solid #cccccc;
+}
